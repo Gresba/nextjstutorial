@@ -1,9 +1,13 @@
 import React from 'react'
+import UserTable from './new/UserTable';
+const UsersPage = async () => 
+{
 
-const UsersPage = () => {
-  return (
-    <div>UsersPage</div>
-  )
+    return (
+        <>
+            <h1>Users</h1>
+            <UserTable />
+        </>)
 }
 
-export default UsersPage
+export default UsersPage;
