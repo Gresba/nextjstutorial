@@ -19,5 +19,6 @@ const config: Config = {
   daisyui: {
     themes: ["winter"]
   },
-}
+} as any
+
 export default config

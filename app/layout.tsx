@@ -1,6 +1,8 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Navbar from './NavBar'
+import './globals.css'
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +17,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="winter">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" data-theme='winter'>
+      <body className={inter.className}>
+        <Navbar />
+        <main className='p-5'>
+          <Suspense fallback={<p>Loading...</p>}>
+            {children}
+          </Suspense>
+        </main>
+      </body>
     </html>
   )
 }

@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 @plugin "daisyui";
 
 :root {
@@ -15,5 +13,4 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  padding: 1rem;
 }
